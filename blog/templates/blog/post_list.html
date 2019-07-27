@@ -1,13 +1,11 @@
 <html>
     <body>
-        <p>Hi there!</p>
-        <a href="https://www.django.com">DjangoGirls 2019 </a>
-        <p>It works!</p>
-        <ul>
-            <li>TEST 1</li>
-            <li>TEST 2</li>
-            <li>TEST 3</li>
-        </ul>
-        <p><h1>Dirección:</h1> Calle Puebla 237 Col. Roma</p>
+        
+       
+        
+        <div><h1><a href = "/">Django chicas Blog</a></h1></div>
+        {% for post in posts %}<div><p>publicado: {{ post.published_date}}</p>
+        <h1><a href="">{{ post.title}}</a></h1>
+        <p>{{ post.text|linebreaksbr}}</p></div>{% endfor %}
     </body>
 </html>
